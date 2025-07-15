@@ -1,0 +1,114 @@
+/* Reset & Body */
+body {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #0b0c10;
+  color: #f0e6d2;
+  overflow-x: hidden;
+}
+
+header.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: url('assets/glyph-bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+.hero .glyph {
+  width: 180px;
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #8c5b3e;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #b8784d;
+}
+
+.btn.secondary {
+  background-color: #3e3e3e;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #e9cba7;
+}
+
+.chamber-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.chamber {
+  background-color: #1c1e22;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(255, 177, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.chamber:hover {
+  transform: scale(1.03);
+}
+
+.chamber.active {
+  border: 2px solid #ffa552;
+}
+
+.chamber.dormant {
+  opacity: 0.6;
+}
+
+.chamber.locked {
+  opacity: 0.4;
+  filter: grayscale(60%);
+}
+
+.chamber.hidden {
+  opacity: 0.3;
+  filter: blur(2px);
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 0.9rem;
+  background-color: #131417;
+  color: #999;
+}
+
+footer nav a {
+  color: #c4a27c;
+  margin: 0 1rem;
+  text-decoration: none;
+}
